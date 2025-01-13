@@ -19,8 +19,9 @@ const isValidPhone = (str) =>
 
 function CreateOrder() {
   const [withPriority, setWithPriority] = useState(false);
+  const username = useSelector((state) => state.user.userName);
   const {
-    username,
+    // username,
     status: addressStatus,
     position,
     address,
@@ -89,7 +90,7 @@ function CreateOrder() {
           </div>
 
           {!position.latitude && !position.longitude && (
-            <span className="absolute right-[5px] top-[5px] z-50 md:right-[5px] md:top-[5px]">
+            <span className="absolute right-[3px] top-[35px] z-50 md:right-[5px] md:top-[5px]">
               <Button
                 type="small"
                 disabled={isLoadingAddress}
@@ -143,7 +144,6 @@ function CreateOrder() {
 export async function action({ request }) {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-  console.log(data);
 
   const order = {
     ...data,
