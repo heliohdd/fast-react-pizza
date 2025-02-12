@@ -1,5 +1,11 @@
 ## Getting Started
 
+<div align="center">
+   <a href="https://heliohdd-fast-react-pizza.vercel.app" alt="The Wild Oasis">
+   <img src="./src/assets/to_readme/FastReactPizzaCo.gif" width="500px" alt="Home Page" />
+   <a>
+</div>
+
 Run each of the lines above in a git bash terminal:
 
 1. Clone the repository
